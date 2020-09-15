@@ -1,0 +1,10 @@
+/* addImageDone.jsp用css */
+
+@charset "utf-8";
+
+body{
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	margin:30px;
+	text-align:center;
+	background-image: url(../images/japanese-paper_00473.jpg);
+}

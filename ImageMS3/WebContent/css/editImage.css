@@ -1,0 +1,22 @@
+/* editImage.jsp用css */
+
+@charset "utf-8";
+
+body{
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	margin:15px;
+	text-align:center;
+	background-image: url(../images/japanese-paper_00473.jpg);
+}
+
+table{
+	margin:20px auto;
+}
+
+.haba{
+	width:100%;
+}
+
+.center{
+	display: inline-block;
+}

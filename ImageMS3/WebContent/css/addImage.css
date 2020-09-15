@@ -1,0 +1,64 @@
+/* addImage.jsp用css */
+
+@charset "utf-8";
+
+body{
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	margin:15px;
+	text-align:center;
+	background-image: url(../images/japanese-paper_00473.jpg);
+}
+
+table{
+	margin:20px auto;
+	box-shadow: 0 10px 25px 0 rgba(77, 53, 3, 0.5);
+}
+
+.haba{
+	width:100%;
+}
+
+.center{
+	display: inline-block;
+}
+
+.icon{
+	width:25px;
+	margin-right:2px;
+}
+
+.right{
+	text-align:right;
+}
+
+.shisetsu{
+	font-weight:bold;
+}
+
+table tr{
+  border-bottom: solid 2px white;
+}
+
+table tr:last-child{
+  border-bottom: none;
+}
+
+table th{
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: rgba(210, 180, 140 ,0.5);
+  color: #4D3503;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+
+table td{
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  background-color: rgba(242, 227, 200, 0.5);
+  padding: 10px 0;
+}
