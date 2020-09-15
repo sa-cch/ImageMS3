@@ -15,7 +15,7 @@ public class DaoFactory {
 		DataSource ds = null;
 		try {
 			ctx = new InitialContext();
-			ds = (DataSource) ctx.lookup("java:comp/env/jdbc/imagedb");
+			ds = (DataSource) ctx.lookup("java:comp/env/jdbc/imagedb3");
 		} catch(NamingException e) {
 			if(ctx != null) {
 				try {

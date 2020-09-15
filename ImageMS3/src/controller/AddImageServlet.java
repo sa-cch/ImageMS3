@@ -63,15 +63,38 @@ public class AddImageServlet extends HttpServlet {
 		}
 
 		// 屋内外種別の取得
-		// TODO ラジオボタン未選択の場合にエラーとしたい。
-		Integer areaTypesId = Integer.parseInt(request.getParameter("areaTypesId"));
-		request.setAttribute("areaTypesId", areaTypesId);
+		// ラジオボタン未選択の場合にエラーとしたい。
+//		Integer areaTypesId = Integer.parseInt(request.getParameter("areaTypesId"));
+//		request.setAttribute("areaTypesId", areaTypesId);
 
+		Integer areaTypesId = null;
+		String strAreaTypesId = request.getParameter("areaTypesId");
+		request.setAttribute("areaTypesId", strAreaTypesId);
+		if(strAreaTypesId != null && !strAreaTypesId.isEmpty()) {
+			try {
+				areaTypesId = Integer.parseInt(strAreaTypesId);
+			} catch (NumberFormatException e) {
+				request.setAttribute("areaTypesIdError", "屋内外を選択してください。");
+				isError = true;
+			}
+		}
+		
 		// エリア名の取得
-		// TODO テキストボックスではなくプルダウンにする。未選択の場合にエラーとしたい。
-		Integer areaNamesId = Integer.parseInt(request.getParameter("areaNamesId"));
-		request.setAttribute("areaNamesId", areaNamesId);
-
+		// テキストボックスではなくプルダウンにする。未選択の場合にエラーとしたい。
+//		Integer areaNamesId = Integer.parseInt(request.getParameter("areaNamesId"));
+//		request.setAttribute("areaNamesId", areaNamesId);
+		
+		Integer areaNamesId = null;
+		String strAreaNamesId = request.getParameter("areaNamesId");
+		request.setAttribute("areaNamesId", strAreaNamesId);
+		if(strAreaNamesId != null && !strAreaNamesId.isEmpty()) {
+			try {
+				areaNamesId = Integer.parseInt(strAreaNamesId);
+			} catch (NumberFormatException e) {
+				request.setAttribute("areaNamesIdError", "エリアを選択してください。");
+				isError = true;
+			}
+		}
 
 		// 写真の取得
 		// uploadsフォルダ内のファイルリストを取得する
