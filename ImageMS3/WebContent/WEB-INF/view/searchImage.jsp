@@ -15,7 +15,7 @@
 <h1>
 <img src="icons/iconfinder_Location_19_1530071.png"> search
 </h1>
-<form action="" method="post" enctype="multipart/form-data">
+<form action="" method="post">
 	<table>
 		<tr>
 			<th>タイトル</th>
@@ -142,7 +142,7 @@
 	</p>
 </form>
 <p>
-	<a href="myPage.jsp">マイページへ戻る</a>
+	<a href="myPage.jsp"><img class="back" src="icons/iconfinder_return-back-redo-arrow_2075802.png"></a>
 </p>
 <!-- ★jQueryとBootstrap用JavaScriptの読み込み  -->
 <script src="js/jquery-2.2.4.min.js"></script>

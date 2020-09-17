@@ -191,7 +191,7 @@
 	</p>
 </form>
 <p>
-	<a href="detailImage2">画像詳細へ戻る</a>
+	<a href="detailImage2"><img class="back" src="icons/iconfinder_return-back-redo-arrow_2075802.png"></a>
 </p>
 <!-- ★jQueryとBootstrap用JavaScriptの読み込み  -->
 <script src="js/jquery-2.2.4.min.js"></script>

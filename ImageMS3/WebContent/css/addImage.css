@@ -12,6 +12,9 @@ body{
 table{
 	margin:20px auto;
 	box-shadow: 0 10px 25px 0 rgba(77, 53, 3, 0.5);
+	table-layout:fixed;
+	width:500px;
+	word-wrap: break-word;
 }
 
 .haba{
@@ -61,4 +64,16 @@ table td{
   text-align: center;
   background-color: rgba(242, 227, 200, 0.5);
   padding: 10px 0;
+}
+
+.back{
+	width:50px;
+}
+
+.kaigyo{
+	white-space: pre-wrap;
+}
+
+.photo{
+	object-fit:contain;
 }

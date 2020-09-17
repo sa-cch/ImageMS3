@@ -14,7 +14,7 @@
 <body>
 <h1>削除完了！</h1>
 <p>削除しました。</p>
-<p><a href="listImage">画像一覧へ戻る</a>
+<p><a href="detailImage2"><img class="back" src="icons/iconfinder_return-back-redo-arrow_2075802.png"></a>
 <!-- ★jQueryとBootstrap用JavaScriptの読み込み  -->
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>

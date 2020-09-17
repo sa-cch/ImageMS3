@@ -191,7 +191,7 @@
 	</p>
 </form>
 <p>
-	<a href="myPage.jsp">マイページへ戻る</a>
+	<a href="myPage.jsp"><img class="back" src="icons/iconfinder_return-back-redo-arrow_2075802.png"></a>
 </p>
 <!-- ★jQueryとBootstrap用JavaScriptの読み込み  -->
 <script src="js/jquery-2.2.4.min.js"></script>

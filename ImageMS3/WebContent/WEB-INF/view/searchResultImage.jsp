@@ -5,7 +5,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>画像詳細</title>
+<title>検索結果詳細</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/addImage.css">
@@ -14,10 +14,10 @@
 </head>
 <body>
 <h1>
-<img src="icons/iconfinder_6-Photo_2674052.png"> view
+<img src="icons/iconfinder_6-Photo_2674052.png"> search Result
 </h1>
 	<table>
-	<c:forEach items="${imageList}" var="image">
+	<c:forEach items="${imageList2}" var="image">
 		<tr>
 			<th>タイトル</th>
 			<td>
@@ -76,7 +76,7 @@
 		</c:forEach>
 	</table>
 	<p>
-		<a href="myPage.jsp"><img class="back" src="icons/iconfinder_return-back-redo-arrow_2075802.png"></a>
+		<a href="searchImage"><img class="back" src="icons/iconfinder_return-back-redo-arrow_2075802.png"></a>
 	</p>
 <!-- ★jQueryとBootstrap用JavaScriptの読み込み  -->
 <script src="js/jquery-2.2.4.min.js"></script>

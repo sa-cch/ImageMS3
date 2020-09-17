@@ -14,7 +14,7 @@
 <body>
 <h1>編集完了！</h1>
 <p>内容を保存しました。</p>
-<p><a href="detailImage2">編集した画像を見る</a>
+<p><a href="detailImage2"><img class="back" src="icons/iconfinder_Camera_4781850.png"></a>
 <!-- ★jQueryとBootstrap用JavaScriptの読み込み  -->
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>

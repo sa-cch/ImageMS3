@@ -15,7 +15,7 @@
 <h1>登録完了！</h1>
 <p>新規登録が完了しました。</p>
 <p>
-	<a href="detailImage2">登録した画像を見る</a>
+	<a href="detailImage2"><img class="back" src="icons/iconfinder_Camera_4781850.png"></a>
 </p>
 <!-- ★jQueryとBootstrap用JavaScriptの読み込み  -->
 <script src="js/jquery-2.2.4.min.js"></script>

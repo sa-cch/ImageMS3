@@ -13,10 +13,10 @@
 </head>
 <body>
 <div class="container">
-<h1>mypage</h1>
-<img class="img-thumbnail" src="images/p5589.jpg">
+<img src="images/new-p5589.jpg" height="350px">
 <p><a class="btn btn-info" href="addImage">push：登録</a></p>
 <p><a class="btn btn-success" href="detailImage2">view：閲覧</a></p>
+<p><a class="btn btn-primary" href="searchImage">search：検索</a></p>
 </div>
 <!-- ★jQueryとBootstrap用JavaScriptの読み込み  -->
 <script src="js/jquery-2.2.4.min.js"></script>

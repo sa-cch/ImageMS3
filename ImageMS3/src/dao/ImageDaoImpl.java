@@ -38,6 +38,67 @@ public class ImageDaoImpl implements ImageDao {
 	}
 
 	@Override
+	public List<Image> findPart(Image image) throws Exception {
+	List<Image> imageList2 = new ArrayList<>();
+	try(Connection con = ds.getConnection()){
+		String sql = "select *, area_types.name as type_name, area_names.name as area_name from (images "
+				+ "join area_types on images.area_types_id = area_types.id)"
+				+ "join area_names on images.area_names_id = area_names.id ";
+		// 以下、SearchImageServlet（doPost）でセットした値をget～で取得したい。
+//		System.out.println(image.getImageName());
+		
+		//もし4項目のうち何か入力あったら、where句を＋する。
+		// elseでバリデーションチェックしたほうがいいかも。
+		if(!image.getImageName().equals("") || !image.getFacilityName().equals("")
+				|| image.getAreaTypesId() != null || image.getAreaNamesId() != 0) {
+			sql += "where ";
+		}
+		
+		// 後からでいいけど、andをどう繋いでいくかも考えよう-ω-（image_nameなかったら、where and...になっちゃう
+		if(!image.getImageName().equals("")) { // ←ここでぬるぽ発生（multipart/form-data入っとった><削除でok）
+			sql += "image_name like ? ";
+		}
+
+		if(!image.getFacilityName().equals("")) {
+			sql += "and facility_name like ? ";
+		}
+
+		if(image.getAreaTypesId() != null) {
+			sql += "and area_types_id=? ";
+		}
+
+		if(image.getAreaNamesId() != 0) {
+			sql += "and area_names_id=? ";
+		}
+
+		sql += "order by created desc";
+
+		PreparedStatement stmt = con.prepareStatement(sql);
+		// プレースホルダ（?パラメータ）にどういう値を格納するのか指定する。
+		// 後からでいいけど、""とかnullとか0やったら?の数減るから、if文で囲うべきかな-ω-
+		stmt.setString(1, image.getImageName());
+		stmt.setString(2, image.getFacilityName());
+		stmt.setObject(3, image.getAreaTypesId(), Types.INTEGER);
+		stmt.setObject(4, image.getAreaNamesId(), Types.INTEGER);
+//		System.out.println(image.getImageName());
+//		System.out.println(image.getFacilityName());
+//		System.out.println(image.getAreaTypesId());
+//		System.out.println(image.getAreaNamesId());
+// ↑ここまでは順調に値入ってる。
+//		System.out.println(sql);
+// ↑sql文も大丈夫っぽい。問題は次の文。$2の近くの構文確認しろって出るんよね、、←2個目、likeが抜けてた！解決！
+		ResultSet rs = stmt.executeQuery();
+		while(rs.next()) {
+			imageList2.add(mapToImage(rs));
+		}
+	} catch(Exception e) {
+		throw e;
+	}
+	return imageList2;
+	}
+	// できた・・・！歓喜TωT
+
+	@Override
 	public Image findById(Integer id) throws Exception {
 		Image image = null;
 		try(Connection con = ds.getConnection()){
@@ -121,5 +182,6 @@ public class ImageDaoImpl implements ImageDao {
 		image.setAreaName(rs.getString("area_name"));
 		return image;
 	}
+
 
 }
