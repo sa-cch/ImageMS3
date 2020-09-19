@@ -84,7 +84,12 @@
    	 <version>4.0.1</version>
    	 <scope>provided</scope>
 	</dependency>
-  	
+
+	<dependency>
+		<groupId>org.apache.tomcat</groupId>
+		<artifactId>tomcat-servlet-api</artifactId>
+		<version>8.5.34</version>
+	</dependency>
   </dependencies>
   <properties>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
