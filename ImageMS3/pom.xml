@@ -5,7 +5,6 @@
   <groupId>com.tamachiiki</groupId>
   <artifactId>ImageMS3</artifactId>
   <version>0.0.1</version>
-  <packaging>war</packaging>
   <build>
   	<sourceDirectory>${basedir}/src</sourceDirectory>
   	<testSourceDirectory>${basedir}/test</testSourceDirectory>
