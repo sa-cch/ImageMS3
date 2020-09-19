@@ -1,6 +1,8 @@
 <%@ page pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<% pageContext.setAttribute("newLineChar", "\n"); %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -53,7 +55,9 @@
 		<tr>
 			<th>メモ</th>
 			<td>
-				<c:out value="${image.memo}"/>
+				<c:forEach items="${fn:split(image.memo, newLineChar)}" var="line">
+					<c:out value="${line}"/><br/>
+				</c:forEach>
 			</td>
 		</tr>
 		<tr>
@@ -67,7 +71,7 @@
 				<a href="editImage?id=<c:out value="${image.id}"/>">
 				<img class="icon" src="icons/iconfinder_Edit-01_1976055.png">
 				</a>
-				<a href="deleteImage?id=<c:out value="${image.id}"/>">
+				<a href="deleteCheck?id=<c:out value="${image.id}"/>">
 				<img class="icon" src="icons/iconfinder_Trash_4781812.png">
 				</a>
 			</td>

@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.DaoFactory;
 import dao.ImageDao;
@@ -32,7 +33,11 @@ public class DeleteImageServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			String strId = request.getParameter("id");
+			String strId = "";
+			
+			HttpSession session = request.getSession();
+		    strId = (String) session.getAttribute("id");
+			
 			Image image = new Image();
 			image.setId(Integer.parseInt(strId));
 			ImageDao imageDao = DaoFactory.createImageDao();
