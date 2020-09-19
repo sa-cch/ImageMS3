@@ -98,7 +98,7 @@ public class AddImageServlet extends HttpServlet {
 
 		// 写真の取得
 		// uploadsフォルダ内のファイルリストを取得する
-		File uploadsDirectory = new File(request.getServletContext().getRealPath("/uploads"));
+		File uploadsDirectory = new File((request).getServletContext().getRealPath("/uploads"));
 		// アップロードされたファイルを保存する
 		Part part = request.getPart("photo");
 		String filename = part.getSubmittedFileName();
