@@ -35,6 +35,7 @@
 			</td>
 		</tr>
 		<tr>
+		
 			<th>シセツ</th>
 			<td class="shisetsu">
 				<c:out value="${image.facilityName}"/>
