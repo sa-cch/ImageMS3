@@ -12,4 +12,10 @@ body{
 img{
 	margin:15px 0px;
 	border-radius: 20px 300px;
+	width: 80%;
+}
+
+.font{
+	color: #4D3503;
+	font-size:14px;
 }
