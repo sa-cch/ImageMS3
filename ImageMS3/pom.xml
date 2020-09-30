@@ -1,3 +1,5 @@
+
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tamachiiki</groupId>
@@ -36,7 +38,26 @@
           <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
       </plugin>
-      
+      <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals><goal>copy</goal></goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.github.jsimone</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>9.0.13.0</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
 	</plugins>
   </build>
   <dependencies>
@@ -83,11 +104,6 @@
 		<version>8.5.34</version>
 	</dependency> -->
   	<dependency>
-  		<groupId>com.hynnet</groupId>
-  		<artifactId>javax.servlet-api</artifactId>
-  		<version>3.1.0</version>
-  	</dependency>
-  	<dependency>
   		<groupId>org.glassfish.web</groupId>
   		<artifactId>jstl-impl</artifactId>
   		<version>1.2</version>
@@ -106,10 +122,25 @@
   			</exclusion>
   		</exclusions>
   	</dependency>
-   	<dependency>
+  	<dependency>
   		<groupId>javax.servlet.jsp.jstl</groupId>
   		<artifactId>jstl-api</artifactId>
   		<version>1.2</version>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>javax.servlet.jsp</groupId>
+  				<artifactId>jsp-api</artifactId>
+  			</exclusion>
+  			<exclusion>
+  				<groupId>javax.servlet</groupId>
+  				<artifactId>servlet-api</artifactId>
+  			</exclusion>
+  		</exclusions>
+  	</dependency>
+    	<dependency>
+  		<groupId>com.hynnet</groupId>
+  		<artifactId>javax.servlet-api</artifactId>
+  		<version>3.1.0</version>
   	</dependency>
   </dependencies>
   <properties>

@@ -13,7 +13,7 @@ table{
 	margin:20px auto;
 	box-shadow: 0 10px 25px 0 rgba(77, 53, 3, 0.5);
 	table-layout:fixed;
-	width:500px;
+	width:75%;
 	word-wrap: break-word;
 }
 
@@ -76,4 +76,9 @@ table td{
 
 .photo{
 	object-fit:contain;
+	max-width: 220px;
+}
+
+.error{
+	color: red;
 }
