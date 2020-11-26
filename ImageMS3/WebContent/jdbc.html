@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>JDBC</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jdbc.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Memorandum</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#topic1">topic1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#topic2">topic2</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col">
+		<div class="kasane">
+			<img class="maru"  id="home" src="images/KUMA1892040_TP_V.jpg">
+			<p>Change JDBC to SpringJDBC</p>
+		</div>
+		<hr>
+		<hr>
+		
+			<h4 class="dai" id="topic1">JDBC→SpringJDBCの変更について整理</h4>
+			
+		<hr>
+		<hr>
+
+
+    <div class="row">
+      <div class="col-lg-7">
+        <h3>そもそもJDBCとは。</h3>
+        <p>Java Database Connectivityの略。<br>
+			Javaで書いたプログラムとデータベースを接続してくれるもの。<br>
+			※データベース製品ごと（MySQL, PostgreSQL, Oracle DataBaseなど）の違いを吸収してくれるので、統一的な操作が可能。べんり！
+		</p>
+      </div>
+      <div class="col-lg-5">
+      <div class="naka">
+        <img class="gazou1" src="images/GAK_orenjiironosuimen_TP_V4.jpg" id="topic2" alt="1">
+      </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-lg-7 order-lg-2">
+        <h3>SpringJDBCに変更したらどんなメリットがある？</h3>
+        <p>①シンプルに記述が楽になる<br>
+		   ②例外処理を書き換えなくて良い
+		</p>
+      </div>
+      <div class="col-lg-5 order-lg-1">
+      <div class="naka">
+        <img class="gazou2" src="images/N811_suimentoyuhi_TP_V4.jpg" alt="2">
+      </div>
+      </div>
+    </div>
+    <hr>
+      <div class="row">
+      <div class="col-lg-7">
+        <h4>メリット①：シンプルに記述が楽になる について</h4>
+        <p>Templateクラスを使うことで記述が楽に。<br>
+			・JdbcTemplateクラス<br>
+			・NamedParameterJdbcTemplateクラス<br>
+			↑Connection, Statement, ResultSetの準備やクローズ処理の記述が不要になる。
+		</p>
+      </div>
+      <div class="col-lg-5">
+      <div class="naka">
+        <img class="gazou3" src="images/iconfinder__star_1679614.png" alt="3">
+      </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-lg-7 order-lg-2">
+        <h4>メリット②：例外処理を書き換えなくて良い について</h4>
+        <p>データベース製品ごとに異なるデータアクセス例外を、Springで定義した共通のデータアクセス例外に変換してくれるので、統一的な記述が可能。べんり！
+		</p>
+      </div>
+      <div class="col-lg-5 order-lg-1">
+      <div class="naka">
+        <img class="gazou4" src="images/iconfinder_star_decorations_2670638.png" alt="4">
+      </div>
+      </div>
+    </div>
+    <hr>
+    <footer>
+      <p class="text-right"><a href="#">↑Top</a></p>
+    </footer>
+  </div>
+		</div>
+	</div>
+</div>
+<!-- ★jQueryとBootstrap用JavaScriptの読み込み  -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

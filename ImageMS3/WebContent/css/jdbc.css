@@ -1,0 +1,70 @@
+/* myPage.jsp用css */
+
+@charset "utf-8";
+
+body{
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	margin:15px;
+	background-color:#fffafa;
+}
+
+.kasane{
+	text-align:center;
+	position: relative;
+	margin-top: 50px;
+}
+
+.kasane p{
+	position: absolute;
+	color: white;/*文字は白に*/
+	font-weight: bold; /*太字に*/
+	font-size: 2em;/*サイズ2倍*/
+	font-family :Quicksand, sans-serif;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	margin:0;
+	padding:0;
+}
+
+.dai{
+	text-align:center;
+}
+
+.maru{
+	margin:15px 0px;
+	border-radius: 41% 59% 48% 52% / 52% 50% 50% 48%;
+	width: 100%;
+}
+
+.link{
+	height:25px;
+}
+
+
+.gazou1{
+	border-radius: 41% 59% 48% 52% / 52% 50% 50% 48%;
+	width:80%;
+	
+}
+.gazou2{
+	border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+	width:80%;
+	
+}
+.gazou3{
+	border-radius: 80% 30% 50% 50%/50%;
+	height:100px;
+	
+}
+.gazou4{
+	border-radius: 41% 59% 48% 52% / 52% 50% 50% 48%;
+	height:100px;
+	
+}
+
+.naka{
+	text-align:center;
+}

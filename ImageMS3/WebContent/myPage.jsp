@@ -15,12 +15,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col">
-			<img src="images/new3-p5589.jpg">
-			<p class="font">
+			<img src="images/winter.jpg">
+<!--		<p class="font">
 			東京・多摩地域の写真を<br>
 			各回“１枚だけ”投稿できる<br>
 			たまちーきの掲示板。
-			</p>
+			</p>   -->
 			<div class="row">
 				<div class="col-12"><p><a class="btn btn-info" href="addImage">push：登録</a></p></div>
 				<div class="col-12"><p><a class="btn btn-success" href="detailImage2">view：閲覧</a></p></div>
